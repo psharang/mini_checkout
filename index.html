@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Checkout Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Mini Checkout Store</h1>
+        <p>Simple and secure shopping experience</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Products Section -->
+        <section class="products-section">
+
+            <h2>Available Products</h2>
+
+            <div class="product-grid">
+
+                <div class="product-card">
+
+                    <div class="product-icon">🎧</div>
+
+                    <h3>Wireless Headphones</h3>
+
+                    <p>High-quality wireless headphones.</p>
+
+                    <h3>₹2,000</h3>
+
+                    <button
+                        type="button"
+                        id="add-headphones"
+                        aria-label="Add Wireless Headphones">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+                <div class="product-card">
+
+                    <div class="product-icon">🖱️</div>
+
+                    <h3>Wireless Mouse</h3>
+
+                    <p>Comfortable wireless computer mouse.</p>
+
+                    <h3>₹800</h3>
+
+                    <button
+                        type="button"
+                        id="add-mouse"
+                        aria-label="Add Wireless Mouse">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart-section">
+
+            <h2>Your Shopping Cart</h2>
+
+            <div id="cart-items">
+
+                <p id="empty-cart">
+                    Your cart is empty.
+                </p>
+
+            </div>
+
+            <div class="total-section">
+
+                <h3>
+                    Order Total:
+                    <span data-testid="order-total">₹0</span>
+                </h3>
+
+            </div>
+
+        </section>
+
+        <!-- Checkout Section -->
+        <section class="checkout-section">
+
+            <h2>Customer Details</h2>
+
+            <form id="checkout-form" novalidate>
+
+                <label for="customer-name">
+                    Customer Name <span class="required">*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="customer-name"
+                    name="customerName"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    id="place-order">
+                    Place Order
+                </button>
+
+            </form>
+
+            <!-- Validation Message -->
+            <div
+                id="validation-message"
+                role="alert"
+                aria-live="assertive"
+                hidden>
+            </div>
+
+            <!-- Order Confirmation -->
+            <div
+                id="confirmation"
+                class="confirmation"
+                role="status"
+                aria-live="polite"
+                hidden>
+
+                <h2>Order placed successfully!</h2>
+
+                <p>Thank you for shopping with us.</p>
+
+                <p>
+                    Order Reference:
+                    <strong data-testid="order-reference"></strong>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mini Checkout Project | SDET Testing Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

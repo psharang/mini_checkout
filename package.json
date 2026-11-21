@@ -1,0 +1,15 @@
+
+{
+  "name": "mini-checkout",
+  "version": "1.0.0",
+  "description": "Mini Checkout and Browser Test Suite - SDET Intern Assignment",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0"
+  }
+}
