@@ -35,16 +35,15 @@ module.exports = defineConfig({
 
     },
 
-    webServer: {
+    
+     webServer: {
+    command: 'python -u -m http.server 4173',
+    url: 'http://127.0.0.1:4173',
+    reuseExistingServer: !process.env.CI,
+    timeout: 30000,
+    stdout: 'pipe',
+    stderr: 'pipe'
+},
 
-        command: 'python -m http.server 4173',
-
-        url: 'http://127.0.0.1:4173',
-
-        reuseExistingServer: !process.env.CI,
-
-        timeout: 30000
-
-    }
 
 });

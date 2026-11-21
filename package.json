@@ -5,6 +5,7 @@
   "description": "Mini Checkout and Browser Test Suite - SDET Intern Assignment",
   "private": true,
   "scripts": {
+    "start": "python -u -m http.server 4173",
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:report": "playwright show-report"
